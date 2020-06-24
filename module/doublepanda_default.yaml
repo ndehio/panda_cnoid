@@ -169,12 +169,12 @@ minimalSelfCollisions:
     damping: 0
 forceSensors:
   - name: LeftHandForceSensor
-    parentBody: panda_linkA8
+    parentBody: panda_linkA7
     X_p_f:
       rotation: [0.0, 0.0, 0.0]
       translation: [0.0, 0.0, 0.0]
   - name: RightHandForceSensor
-    parentBody: panda_linkB8
+    parentBody: panda_linkB7
     X_p_f:
       rotation: [0.0, 0.0, 0.0]
       translation: [0.0, 0.0, 0.0]
