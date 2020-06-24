@@ -356,7 +356,7 @@ DEF main_link Humanoid {
                                   climit [12.0]
                                   children [
                                     DEF wristsensorA ForceSensor {# taken from R_FOOT Joint in HRP4LIRMM_main.wrl 
-                                      translation 0 0 -0.093
+                                      translation 0 0 0.107
                                       rotation 1 0 0 0
                                       sensorId 0
                                     }
