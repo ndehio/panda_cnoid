@@ -367,7 +367,7 @@ DEF main_link Humanoid {
                                   children [
                                     DEF wristsensorA ForceSensor {# taken from R_FOOT Joint in HRP4LIRMM_main.wrl 
                                       translation 0 0 0.107
-                                      rotation 1 0 0 0
+                                      rotation 1 0 0 3.14
                                       sensorId 0
                                     }
                                     #DEF wristsensorA ForceSensor {# taken from R_WRIST_R Joint in HRP4LIRMM_main.wrl 
@@ -603,7 +603,7 @@ DEF main_link Humanoid {
                                   children [
                                     DEF wristsensorB ForceSensor {# taken from R_FOOT Joint in HRP4LIRMM_main.wrl 
                                       translation 0 0 -0.093
-                                      rotation 1 0 0 0
+                                      rotation 1 0 0 3.14
                                       sensorId 1
                                     }
                                     #DEF wristsensorB ForceSensor {# taken from R_WRIST_R Joint in HRP4LIRMM_main.wrl 
