@@ -1,6 +1,6 @@
 path: "@URDF_DESTINATION@"
 name: doublepanda_default
-urdf_path: "@URDF_DESTINATION@/doublepanda_arm_default.urdf"
+urdf_path: "@URDF_DESTINATION@/doublepanda_default.urdf"
 fixed: true
 stance:
   panda_jointA4: [-0.78] # -45 deg

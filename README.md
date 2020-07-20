@@ -39,7 +39,7 @@ Adding a new panda variant
 
 1. Create a new xacro file for your panda extension
 
-An example is given in [xacro/panda_arm_foot.urdf.xacro](xacro/panda_arm_foot.urdf.xacro). In that particular case we are putting a specific end-effector on the panda arm so the xacro file itself includes the panda arm xacro file for [franka_gazebo].
+An example is given in [xacro/panda_foot.urdf.xacro](xacro/panda_foot.urdf.xacro). In that particular case we are putting a specific end-effector on the panda arm so the xacro file itself includes the panda arm xacro file for [franka_gazebo].
 
 Things to note:
 - that particular file uses an extra xacro file ([xacro/foot.xacro](xacro/foot.xacro)), we will see how to handle this in the next step;
@@ -53,12 +53,12 @@ Simply copy the existing models in the [repository](model/).
 
 This will ensure that the URDF model is generated from your xacro file and that the robot model and aliases are generated.
 
-Here is the relevant snippet for `panda_arm_foot`
+Here is the relevant snippet for `panda_foot`
 
 ```cmake
 configure_file("xacro/foot.xacro" "${CMAKE_BINARY_DIR}/xacro/foot.xacro" @ONLY)
 install(FILES xacro/meshes/foot.stl DESTINATION "${MESHES_DESTINATION}")
-GENERATE_ROBOT("xacro/panda_arm_foot.urdf.xacro" "panda_foot" "${CMAKE_BINARY_DIR}/xacro/foot.xacro")
+GENERATE_ROBOT("xacro/panda_foot.urdf.xacro" "panda_foot" "${CMAKE_BINARY_DIR}/xacro/foot.xacro")
 ```
 
 The first two lines take care of generating the intermediary xacro file we need and to install the extra mesh we have added.
@@ -72,15 +72,15 @@ This requires [simtrans] and a generated URDF file.
 Go into the `model/panda` folder and run the following:
 
 ```bash
-simtrans -i /path/to/your/panda.urdf -o panda_arm_myvariant.wrl
+simtrans -i /path/to/your/panda.urdf -o panda_myvariant.wrl
 ```
 
-You then need to edit `panda_arm_myvariant.wrl` to:
+You then need to edit `panda_myvariant.wrl` to:
 
 - modify `jointId` entries so that panda\_joint1 has id 0, panda\_joint2 has id 1 and so-on (up-to panda\_joint7 or more if your own model has extra joints)
 - modify `jointAxis` to `0.0 0.0 1.0` for every joint from panda\_joint1 to panda\_joint7 as simtrans seems to get those wrong (if your model includes extra joints you might need to check whether the axis are correctly defined by yourself)
 
-You can check that your robot is displayed correctly by running `choreonoid panda_arm_myvariant_project.cnoid`. You can remove this file and `panda_arm_myvariant_project.xml` afterwards as those files are not required.
+You can check that your robot is displayed correctly by running `choreonoid panda_myvariant_project.cnoid`. You can remove this file and `panda_myvariant_project.xml` afterwards as those files are not required.
 
 5. Generate a cnoid project
 
@@ -94,7 +94,7 @@ If needed, here are the three files:
 Once these files are correct, you can append the following to `CMakeLists.txt`:
 
 ```cmake
-GENERATE_CNOID_PROJECT(panda_myvariant panda_arm_myvariant)
+GENERATE_CNOID_PROJECT(panda_myvariant panda_myvariant)
 ```
 
 [franka_gazebo]: https://github.com/mkrizmancic/franka_gazebo

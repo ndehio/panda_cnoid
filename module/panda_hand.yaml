@@ -1,6 +1,6 @@
 path: "@URDF_DESTINATION@"
 name: panda_hand
-urdf_path: "@URDF_DESTINATION@/panda_arm_hand.urdf"
+urdf_path: "@URDF_DESTINATION@/panda_hand.urdf"
 fixed: true
 grippers:
   - name: gripper

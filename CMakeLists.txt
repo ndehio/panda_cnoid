@@ -66,25 +66,25 @@ endmacro()
 
 configure_file("xacro/main.xacro" "${CMAKE_BINARY_DIR}/xacro/main.xacro" @ONLY)
 configure_file("xacro/main.gazebo.xacro" "${CMAKE_BINARY_DIR}/xacro/main.gazebo.xacro" @ONLY)
-configure_file("xacro/pandaA_arm.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaA_arm.xacro" @ONLY)
-configure_file("xacro/pandaA_arm.gazebo.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaA_arm.gazebo.xacro" @ONLY)
-configure_file("xacro/pandaB_arm.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaB_arm.xacro" @ONLY)
-configure_file("xacro/pandaB_arm.gazebo.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaB_arm.gazebo.xacro" @ONLY)
+configure_file("xacro/pandaA.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaA.xacro" @ONLY)
+configure_file("xacro/pandaA.gazebo.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaA.gazebo.xacro" @ONLY)
+configure_file("xacro/pandaB.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaB.xacro" @ONLY)
+configure_file("xacro/pandaB.gazebo.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaB.gazebo.xacro" @ONLY)
 configure_file("xacro/foot.xacro" "${CMAKE_BINARY_DIR}/xacro/foot.xacro" @ONLY)
 install(FILES xacro/meshes/foot.stl DESTINATION "${MESHES_DESTINATION}")
 
 # panda robot without any end-effector
-#GENERATE_ROBOT("${FRANKA_GAZEBO_PATH}/robots/panda_arm.urdf.xacro" "panda_default")
-GENERATE_ROBOT("xacro/panda_arm_default.urdf.xacro" "panda_default")
+#GENERATE_ROBOT("${FRANKA_GAZEBO_PATH}/robots/panda.urdf.xacro" "panda_default")
+GENERATE_ROBOT("xacro/panda_default.urdf.xacro" "panda_default")
 # panda robot with a two-finger gripper "hand" as end-effector
-#GENERATE_ROBOT("${FRANKA_GAZEBO_PATH}/robots/panda_arm_hand.urdf.xacro" "panda_hand")
-GENERATE_ROBOT("xacro/panda_arm_hand.urdf.xacro" "panda_hand")
+#GENERATE_ROBOT("${FRANKA_GAZEBO_PATH}/robots/panda_hand.urdf.xacro" "panda_hand")
+GENERATE_ROBOT("xacro/panda_hand.urdf.xacro" "panda_hand")
 # panda robot with a flat "foot" as end-effector
-GENERATE_ROBOT("xacro/panda_arm_foot.urdf.xacro" "panda_foot") # "${CMAKE_BINARY_DIR}/xacro/foot.xacro"
+GENERATE_ROBOT("xacro/panda_foot.urdf.xacro" "panda_foot") # "${CMAKE_BINARY_DIR}/xacro/foot.xacro"
 # panda robot with a suction cup "pump" as end-effector
-# GENERATE_ROBOT("xacro/panda_arm_pump.urdf.xacro" "panda_pump") 
+# GENERATE_ROBOT("xacro/panda_pump.urdf.xacro" "panda_pump") 
 # two panda robots without any end-effector
-GENERATE_ROBOT("xacro/doublepanda_arm_default.urdf.xacro" "doublepanda_default")
+GENERATE_ROBOT("xacro/doublepanda_default.urdf.xacro" "doublepanda_default")
 
 # Install convex
 
@@ -131,9 +131,9 @@ macro(GENERATE_CNOID_PROJECT PROJECT_FOLDER WRL_NAME)
 endmacro()
 
 if(choreonoid_FOUND)
-  GENERATE_CNOID_PROJECT(panda_default panda_arm_default)
-  GENERATE_CNOID_PROJECT(panda_hand panda_arm_hand)
-  GENERATE_CNOID_PROJECT(panda_foot panda_arm_foot)
-  #GENERATE_CNOID_PROJECT(panda_pump panda_arm_pump)
-  GENERATE_CNOID_PROJECT(doublepanda_default doublepanda_arm_default)
+  GENERATE_CNOID_PROJECT(panda_default panda_default)
+  GENERATE_CNOID_PROJECT(panda_hand panda_hand)
+  GENERATE_CNOID_PROJECT(panda_foot panda_foot)
+  #GENERATE_CNOID_PROJECT(panda_pump panda_pump)
+  GENERATE_CNOID_PROJECT(doublepanda_default doublepanda_default)
 endif()

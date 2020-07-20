@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda_main_part">
   <xacro:macro name="main" params="arm_id:='main' package_name:='franka_gazebo' connected_to:='' xyz:='0 0 0' rpy:='0 0 0'">
     <xacro:unless value="${not connected_to}">
       <link name="${connected_to}"/>
