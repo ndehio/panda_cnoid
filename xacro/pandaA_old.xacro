@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda_manipulatorA_part">
-  <!-- safety_distance: Minimum safety distance in [m] by which the collision volumes are expanded and which is enforced during robot motions -->
-  <!-- arm_id: Namespace of the panda arm. Serves to differentiate between arms in case of multiple instances. -->
   <xacro:macro name="pandaA" params="arm_id:='panda' package_name:='franka_gazebo' connected_to:='' xyz:='0 0 0' rpy:='0 0 0' safety_distance:=0">
     <xacro:unless value="${not connected_to}">
       <!-- <link name="${connected_to}"/>-->
@@ -34,21 +32,9 @@
         </material>
       </visual>
       <collision>
-        <origin xyz="-0.075 0 0.06" rpy="0 ${pi/2} 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.06+safety_distance}" length="0.03" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="-0.06 0 0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="-0.09 0 0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
+          <mesh filename="package://${package_name}/meshes/collision/link0.stl"/>
         </geometry>
       </collision>
     </link>
@@ -69,21 +55,9 @@
         </material>
       </visual>
       <collision>
-        <origin xyz="0 0 -0.1915" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.06+safety_distance}" length="0.2830" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.333" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.05" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
+          <mesh filename="package://${package_name}/meshes/collision/link1.stl"/>
         </geometry>
       </collision>
     </link>
@@ -115,19 +89,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.06+safety_distance}" length="0.12" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
+          <mesh filename="package://${package_name}/meshes/collision/link2.stl"/>
         </geometry>
       </collision>
     </link>
@@ -157,21 +119,9 @@
         </material>
       </visual>
       <collision>
-        <origin xyz="0 0 -0.145" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.06+safety_distance}" length="0.15" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.22" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.07" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
+          <mesh filename="package://${package_name}/meshes/collision/link3.stl"/>
         </geometry>
       </collision>
     </link>
@@ -203,19 +153,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.06+safety_distance}" length="0.12" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
+          <mesh filename="package://${package_name}/meshes/collision/link4.stl"/>
         </geometry>
       </collision>
     </link>
@@ -245,39 +183,9 @@
         </material>
       </visual>
       <collision>
-        <origin xyz="0 0 -0.26" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.06+safety_distance}" length="0.1" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.31" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.21" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.06+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0.08 -0.13" rpy="0 0 0"/>
-        <geometry>
-          <cylinder radius="${0.025+safety_distance}" length="0.14" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0.08 -0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.025+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0.08 -0.20" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.025+safety_distance}" />
+          <mesh filename="package://${package_name}/meshes/collision/link5.stl"/>
         </geometry>
       </collision>
     </link>
@@ -307,21 +215,9 @@
         </material>
       </visual>
       <collision>
-        <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.05+safety_distance}" length="0.08" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.05+safety_distance}" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.07" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.05+safety_distance}" />
+          <mesh filename="package://${package_name}/meshes/collision/link6.stl"/>
         </geometry>
       </collision>
     </link>
@@ -351,21 +247,9 @@
         </material>
       </visual>
       <collision>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="${0.04+safety_distance}" length="0.14" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 0.08" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.04+safety_distance}"  />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0 0 -0.06" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.04+safety_distance}"  />
+          <mesh filename="package://${package_name}/meshes/collision/link7.stl"/>
         </geometry>
       </collision>
     </link>
@@ -379,26 +263,7 @@
       <limit effort="12" lower="-2.8973" upper="2.8973" velocity="2.6100"/>
     </joint>
 
-    <link name="${arm_id}_linkA8">
-      <collision>
-        <origin xyz="0.0424 0.0424 -0.0250" rpy="${pi} ${pi/2} ${pi/2}"/>
-        <geometry>
-          <cylinder radius="${0.03+safety_distance}"  length="0.01" />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0.0424 0.0424 -0.02" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.03+safety_distance}"  />
-        </geometry>
-      </collision>
-      <collision>
-        <origin xyz="0.0424 0.0424 -0.03" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${0.03+safety_distance}"  />
-        </geometry>
-      </collision>
-    </link>
+    <link name="${arm_id}_linkA8"/>
 
     <joint name="${arm_id}_jointA8" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0.107"/>

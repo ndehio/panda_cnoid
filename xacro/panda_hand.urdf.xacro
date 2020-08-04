@@ -12,6 +12,6 @@
   <xacro:include filename="$(find franka_gazebo)/robots/hand.xacro"/>
   
   <xacro:main connected_to='world'/>
-  <xacro:pandaA xyz="0 0 0" connected_to='main_link'/>
+  <xacro:pandaA xyz="0 0 0" connected_to='main_link' safety_distance="0.03"/>
   <xacro:hand ns="panda" rpy="0 0 ${-pi/4}" connected_to="panda_linkA8"/>
 </robot>

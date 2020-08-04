@@ -14,7 +14,7 @@
   </xacro:include>
 
   <xacro:main connected_to='world'/>
-  <xacro:pandaA xyz="0 +1 0" connected_to='main_link'/>
+  <xacro:pandaA xyz="0 +1 0" connected_to='main_link' safety_distance="0.03"/>
   <xacro:pandaB xyz="0 -1 0" connected_to='main_link'/>
 </robot>
 
