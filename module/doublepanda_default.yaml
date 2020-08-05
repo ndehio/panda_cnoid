@@ -28,142 +28,142 @@ convexHulls:
   panda_linkB7: [panda_linkB7, "@URDF_DESTINATION@/convex/panda_default/panda_link7-ch.txt"]
 minimalSelfCollisions:
 # First Panda
-  - body1: panda_linkA0
-    body2: panda_linkA5
+  - body1: panda_linkA0*
+    body2: panda_linkA5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA1
-    body2: panda_linkA5
+  - body1: panda_linkA1*
+    body2: panda_linkA5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA2
-    body2: panda_linkA5
+  - body1: panda_linkA2*
+    body2: panda_linkA5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA3
-    body2: panda_linkA5
+  - body1: panda_linkA3*
+    body2: panda_linkA5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA0
-    body2: panda_linkA6
+  - body1: panda_linkA0*
+    body2: panda_linkA6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA1
-    body2: panda_linkA6
+  - body1: panda_linkA1*
+    body2: panda_linkA6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA2
-    body2: panda_linkA6
+  - body1: panda_linkA2*
+    body2: panda_linkA6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA3
-    body2: panda_linkA6
+  - body1: panda_linkA3*
+    body2: panda_linkA6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA0
-    body2: panda_linkA7
+  - body1: panda_linkA0*
+    body2: panda_linkA7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA1
-    body2: panda_linkA7
+  - body1: panda_linkA1*
+    body2: panda_linkA7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA2
-    body2: panda_linkA7
+  - body1: panda_linkA2*
+    body2: panda_linkA7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkA3
-    body2: panda_linkA7
+  - body1: panda_linkA3*
+    body2: panda_linkA7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
 #TODO do we need the last self-collision?
-  - body1: panda_linkA7
-    body2: panda_linkA5
+  - body1: panda_linkA7*
+    body2: panda_linkA5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
 # Second Panda
-  - body1: panda_linkB0
-    body2: panda_linkB5
+  - body1: panda_linkB0*
+    body2: panda_linkB5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB1
-    body2: panda_linkB5
+  - body1: panda_linkB1*
+    body2: panda_linkB5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB2
-    body2: panda_linkB5
+  - body1: panda_linkB2*
+    body2: panda_linkB5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB3
-    body2: panda_linkB5
+  - body1: panda_linkB3*
+    body2: panda_linkB5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB0
-    body2: panda_linkB6
+  - body1: panda_linkB0*
+    body2: panda_linkB6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB1
-    body2: panda_linkB6
+  - body1: panda_linkB1*
+    body2: panda_linkB6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB2
-    body2: panda_linkB6
+  - body1: panda_linkB2*
+    body2: panda_linkB6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB3
-    body2: panda_linkB6
+  - body1: panda_linkB3*
+    body2: panda_linkB6*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB0
-    body2: panda_linkB7
+  - body1: panda_linkB0*
+    body2: panda_linkB7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB1
-    body2: panda_linkB7
+  - body1: panda_linkB1*
+    body2: panda_linkB7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB2
-    body2: panda_linkB7
+  - body1: panda_linkB2*
+    body2: panda_linkB7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
-  - body1: panda_linkB3
-    body2: panda_linkB7
+  - body1: panda_linkB3*
+    body2: panda_linkB7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
 #TODO do we need the last self-collision?
-  - body1: panda_linkB7
-    body2: panda_linkB5
+  - body1: panda_linkB7*
+    body2: panda_linkB5*
     iDist: 0.06
     sDist: 0.02
     damping: 0
 # First and Second Panda (TODO: add more)
-  - body1: panda_linkA7
-    body2: panda_linkB7
+  - body1: panda_linkA7*
+    body2: panda_linkB7*
     iDist: 0.06
     sDist: 0.02
     damping: 0
