@@ -82,7 +82,7 @@ GENERATE_ROBOT("xacro/panda_hand.urdf.xacro" "panda_hand")
 # panda robot with a flat "foot" as end-effector
 GENERATE_ROBOT("xacro/panda_foot.urdf.xacro" "panda_foot") # "${CMAKE_BINARY_DIR}/xacro/foot.xacro"
 # panda robot with a suction cup "pump" as end-effector
-# GENERATE_ROBOT("xacro/panda_pump.urdf.xacro" "panda_pump") 
+GENERATE_ROBOT("xacro/panda_pump.urdf.xacro" "panda_pump") 
 # two panda robots without any end-effector
 GENERATE_ROBOT("xacro/doublepanda_default.urdf.xacro" "doublepanda_default")
 
@@ -134,6 +134,6 @@ if(choreonoid_FOUND)
   GENERATE_CNOID_PROJECT(panda_default panda_default)
   GENERATE_CNOID_PROJECT(panda_hand panda_hand)
   GENERATE_CNOID_PROJECT(panda_foot panda_foot)
-  #GENERATE_CNOID_PROJECT(panda_pump panda_pump)
+  GENERATE_CNOID_PROJECT(panda_pump panda_pump)
   GENERATE_CNOID_PROJECT(doublepanda_default doublepanda_default)
 endif()

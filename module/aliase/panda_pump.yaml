@@ -1,0 +1,1 @@
+panda_pump: [json, "@URDF_DESTINATION@/panda_pump.yaml"]
