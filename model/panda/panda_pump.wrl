@@ -381,6 +381,16 @@ DEF main_link Humanoid {
                                             }
                                           ]
                                         }
+                                        Transform {
+                                          scale 1.0 1.0 1.0
+                                          translation 0.0 0.0 0.107
+                                          rotation -0.0 -0.0 -1.0 0.785398
+                                          children [
+                                            Inline {
+                                              url "panda-panda_link7-panda-panda_link7_fixed_joint_lump__panda_pump_visual_1.wrl"
+                                            }
+                                          ]
+                                        }
                                       ]
                                     }
                                         

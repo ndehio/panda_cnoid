@@ -71,7 +71,9 @@ configure_file("xacro/pandaA.gazebo.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaA.gaz
 configure_file("xacro/pandaB.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaB.xacro" @ONLY)
 configure_file("xacro/pandaB.gazebo.xacro" "${CMAKE_BINARY_DIR}/xacro/pandaB.gazebo.xacro" @ONLY)
 configure_file("xacro/foot.xacro" "${CMAKE_BINARY_DIR}/xacro/foot.xacro" @ONLY)
+configure_file("xacro/pump.xacro" "${CMAKE_BINARY_DIR}/xacro/pump.xacro" @ONLY)
 install(FILES xacro/meshes/foot.stl DESTINATION "${MESHES_DESTINATION}")
+install(FILES xacro/meshes/pump.stl DESTINATION "${MESHES_DESTINATION}")
 
 # panda robot without any end-effector
 #GENERATE_ROBOT("${FRANKA_GAZEBO_PATH}/robots/panda.urdf.xacro" "panda_default")
@@ -82,7 +84,7 @@ GENERATE_ROBOT("xacro/panda_hand.urdf.xacro" "panda_hand")
 # panda robot with a flat "foot" as end-effector
 GENERATE_ROBOT("xacro/panda_foot.urdf.xacro" "panda_foot") # "${CMAKE_BINARY_DIR}/xacro/foot.xacro"
 # panda robot with a suction cup "pump" as end-effector
-GENERATE_ROBOT("xacro/panda_pump.urdf.xacro" "panda_pump") 
+GENERATE_ROBOT("xacro/panda_pump.urdf.xacro" "panda_pump") # "${CMAKE_BINARY_DIR}/xacro/pump.xacro"
 # two panda robots without any end-effector
 GENERATE_ROBOT("xacro/doublepanda_default.urdf.xacro" "doublepanda_default")
 
