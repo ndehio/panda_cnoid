@@ -16,14 +16,14 @@
 
     <link name="${ns}_foot">
       <inertial>
-        <mass value="0.73" />
-        <origin xyz="0 0.0015244 0.0275912" rpy="0 0 0" />
-        <inertia ixx="0.00278560230025" ixy="0.0" ixz="0.0" iyy="0.000400033405336" iyz="0.0" izz="0.00256378041832" />
+        <mass value="0.1" />
+        <origin xyz="0 0 0.01" rpy="0 0 0" />
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
       </inertial>
       <visual>
         <origin xyz="${xyz}" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://@MESHES_DESTINATION@/foot.stl"/>
+          <mesh filename="file://@MESHES_DESTINATION@/foot.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="">
           <color rgba="1 1 1 1"/>
@@ -32,7 +32,7 @@
       <collision>
         <origin xyz="${xyz}" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://@MESHES_DESTINATION@/foot.stl"/>
+          <mesh filename="file://@MESHES_DESTINATION@/foot.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
     </link>
